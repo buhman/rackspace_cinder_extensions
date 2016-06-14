@@ -9,7 +9,8 @@ class TestCase(test.TestCase):
         super(TestCase, self).setUp()
         self.flags(
             osapi_volume_extension=[
-                'rackspace_cinder_extensions.rax_extensions'])
+                'rackspace_cinder_extensions.contrib.volume_session_attribute'])
+                #'rackspace_cinder_extensions.rax_extensions'])
 
         self.override_config('policy_file',
                              os.path.join(

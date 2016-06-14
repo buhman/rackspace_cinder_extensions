@@ -3,6 +3,15 @@ from oslo_config import cfg
 
 CONF = cfg.CONF
 
+lunr_opts = [
+    cfg.StrOpt('admin_tenant_id',
+               default='admin',
+               help='lunr admin context tenant ID'),
+]
+
+CONF.register_opts(lunr_opts,
+                   group='lunr')
+
 global_opts = [
     cfg.StrOpt('rsapi_volume_ext_list',
                default=[],
